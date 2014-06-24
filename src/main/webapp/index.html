@@ -9,42 +9,46 @@
   <head>
     <title>HTML</title>
   </head>
-  <body bgcolor="#AAAAAA" topmargin="5">
+  <body bgcolor="#FFFFFF" topmargin="5">
 	<h1 align="center">FaceGeek !</h1>
 	
 	<h2 class = "text.danger" align="center">Le Site De Rencontre Des Geeks !</h2>
     <body ng-controller="HelloCtrl">
-         GEEK PROFILE : <input type="Text" ng-model ="name">   {{name}}
+         GEEK PROFILE :
           				<br><br/> 
 					<FORM>
-						 <INPUT type= "radio" name="tarif" value="jour"> tarif de jour
-						 <INPUT type= "radio" name="tarif" value="nuit"> tarif de nuit
-						 <INPUT type= "radio" name="tarif" value="week-end"> tarif de week-end
+						 <INPUT type= "radio" name="sexe" value="Masculin"ng-click="showGeekSexe('HOMME')"> Masculin
+						 <INPUT type= "radio" name="sexe" value="Feminin" ng-click="showGeekSexe('FEMME')"> Feminin
 					</FORM>
-					  <INPUT type= "radio" name="tarif" value="jour" checked> tarif de jour
-					  <input type="radio" name="Recherche" value="Recherche"  ng-click="showGeek">
 					  <br><br/> 
+					    <FORM>
+					    <SELECT name="centreInteret" size="1">
+					    <OPTION ng-repeat="interet in interets" bgcolor="#FFFFFF">		
+                		<font color="arial" face="#FFFF00">
+                  		{{interet.programmation}}	
+                		</font>
+					    </SELECT>
+					    </FORM>
+					  
 					  <br><br/>
        
-                  <!-- Début Mini Tableau ;-) -->
-                   <table  border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFF00">
+       
+                   <table  border="0" cellpadding="3" cellspacing="1" bgcolor="#AAAAAA">
                    <tr> 
-              			<td ng-repeat="geek in geeks" bgcolor="#FFFF00">
-              			
+              			<td ng-repeat="geek in geeks" bgcolor="#FFFFFF">		
                 		<font color="arial" face="#FFFF00">
                   		<h2>Profile : {{geek.id}}</h2>
 					   <span>Nom : {{geek.nom}} <br/> 
 					   		 Prenom :{{geek.prenom}}<br/>
 					   		 Age : {{geek.age}}<br/>
-					   		 Sexe : {{geek.sexe}}<br/> </span>  
-					   		
+					   		 Sexe : {{geek.sexe}}<br/> </span>    		
                 	</font>
               		</td>
-            	</tr>
-            	
+            	</tr>            	
              	</table> 
-         
-          <!-- Fin Mini Tableau -->
+             	
+             	  
+       
 					   
       
         <script src="/js/angular.js"></script>

@@ -19,12 +19,12 @@ import com.ninja_squad.geektic.entity.Interet;
 public class InteretService {
 	
 		@Autowired
-		private InteretDao interetDaoService;
+		private InteretDao interetDao;
 		 
 		 
 		  	@RequestMapping(method = GET)
 		    public List<Interet> showGeekByInterest() {
-		  		List<Interet> Interet = interetDaoService.findAllInteret();
+		  		List<Interet> Interet = interetDao.findAllInteret();
 				return Interet;
 		    }
 }

@@ -32,9 +32,18 @@ public class GeekDao {
 		
 		// Recherche Les Geek By Interest
 		public List<Geek> findByInteret(int Interet){
-			String jpql = "select a from GEEK a  where a.Interet like :INTERET";
+			String jpql = "select a from Geek a  where a.Interet like :INTERET";
 			TypedQuery<Geek> query = entityManager.createQuery(jpql, Geek.class);
 			query.setParameter("INTERET",Interet);
+			List<Geek> result = query.getResultList();
+			return result;
+			
+		}
+		
+		public List<Geek> findBySex(String Sexe){
+			String jpql = "select a from Geek a  where a.sexe like :SEXE";
+			TypedQuery<Geek> query = entityManager.createQuery(jpql, Geek.class);
+			query.setParameter("SEXE",Sexe);
 			List<Geek> result = query.getResultList();
 			return result;
 			

@@ -6,7 +6,9 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ninja_squad.geektic.dao.GeekDao;
@@ -27,6 +29,12 @@ public class GeekService {
 			return geek;
 	    }
 
+	  	@RequestMapping(value="/{sexe}", method = RequestMethod.GET)
+	  	public List<Geek> showGeekSexe(@PathVariable("sexe") String sexe) {
+	  		List<Geek> geek = geekDao.findBySex(sexe);
+	  		return geek;
+	  	}
+	  	
 
 		public GeekService() {
 			

@@ -4,11 +4,52 @@
     <head>
         <title>Geektic</title>
     </head>
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>HTML</title>
+  </head>
+  <body bgcolor="#AAAAAA" topmargin="5">
+	<h1 align="center">FaceGeek !</h1>
+	
+	<h2 class = "text.danger" align="center">Le Site De Rencontre Des Geeks !</h2>
     <body ng-controller="HelloCtrl">
-        <h1>{{ helloMessage.message }}</h1>
-
+         GEEK PROFILE : <input type="Text" ng-model ="name">   {{name}}
+          				<br><br/> 
+					<FORM>
+						 <INPUT type= "radio" name="tarif" value="jour"> tarif de jour
+						 <INPUT type= "radio" name="tarif" value="nuit"> tarif de nuit
+						 <INPUT type= "radio" name="tarif" value="week-end"> tarif de week-end
+					</FORM>
+					  <INPUT type= "radio" name="tarif" value="jour" checked> tarif de jour
+					  <input type="radio" name="Recherche" value="Recherche"  ng-click="showGeek">
+					  <br><br/> 
+					  <br><br/>
+       
+                  <!-- Début Mini Tableau ;-) -->
+                   <table  border="0" cellpadding="3" cellspacing="1" bgcolor="#FFFF00">
+                   <tr> 
+              			<td ng-repeat="geek in geeks" bgcolor="#FFFF00">
+              			
+                		<font color="arial" face="#FFFF00">
+                  		<h2>Profile : {{geek.id}}</h2>
+					   <span>Nom : {{geek.nom}} <br/> 
+					   		 Prenom :{{geek.prenom}}<br/>
+					   		 Age : {{geek.age}}<br/>
+					   		 Sexe : {{geek.sexe}}<br/> </span>  
+					   		
+                	</font>
+              		</td>
+            	</tr>
+            	
+             	</table> 
+         
+          <!-- Fin Mini Tableau -->
+					   
+      
         <script src="/js/angular.js"></script>
         <script src="/js/angular-route.js"></script>
         <script src="/js/app.js"></script>
     </body>
+     </body>
 </html>

@@ -5,3 +5,11 @@ app.controller('HelloCtrl', function($scope, $http) {
         $scope.helloMessage = helloMessage;
     });
 });
+
+
+app.controller('HelloCtrl', function($scope, $http) {
+	$scope.geeks = []; 
+    $http.get('/api/geek').success(function(geeks) {
+        $scope.geeks = geeks;
+    });
+});

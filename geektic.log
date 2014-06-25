@@ -1,0 +1,12 @@
+09:10:39,600 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.Age as Age2_0_, geek0_.Nom as Nom3_0_, geek0_.Prenom as Prenom4_0_, geek0_.Sexe as Sexe5_0_ from GEEK geek0_ order by geek0_.id
+09:10:39,835 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.Age as Age2_0_0_, geek0_.Nom as Nom3_0_0_, geek0_.Prenom as Prenom4_0_0_, geek0_.Sexe as Sexe5_0_0_ from GEEK geek0_ where geek0_.id=?
+09:10:40,053 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.Age as Age2_0_, geek0_.Nom as Nom3_0_, geek0_.Prenom as Prenom4_0_, geek0_.Sexe as Sexe5_0_ from GEEK geek0_ where geek0_.Sexe like ?
+09:13:28,348 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.Age as Age2_0_, geek0_.Nom as Nom3_0_, geek0_.Prenom as Prenom4_0_, geek0_.Sexe as Sexe5_0_ from GEEK geek0_ order by geek0_.id
+09:13:28,599 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.Age as Age2_0_0_, geek0_.Nom as Nom3_0_0_, geek0_.Prenom as Prenom4_0_0_, geek0_.Sexe as Sexe5_0_0_ from GEEK geek0_ where geek0_.id=?
+09:13:28,817 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.Age as Age2_0_, geek0_.Nom as Nom3_0_, geek0_.Prenom as Prenom4_0_, geek0_.Sexe as Sexe5_0_ from GEEK geek0_ where geek0_.Sexe like ?
+09:14:15,245 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.Age as Age2_0_, geek0_.Nom as Nom3_0_, geek0_.Prenom as Prenom4_0_, geek0_.Sexe as Sexe5_0_ from GEEK geek0_ order by geek0_.id
+09:14:15,480 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_0_, geek0_.Age as Age2_0_0_, geek0_.Nom as Nom3_0_0_, geek0_.Prenom as Prenom4_0_0_, geek0_.Sexe as Sexe5_0_0_ from GEEK geek0_ where geek0_.id=?
+09:14:15,698 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.Age as Age2_0_, geek0_.Nom as Nom3_0_, geek0_.Prenom as Prenom4_0_, geek0_.Sexe as Sexe5_0_ from GEEK geek0_ where geek0_.Sexe like ?
+09:14:15,807 DEBUG main hibernate.SQL:109 - select geek0_.id as id1_0_, geek0_.Age as Age2_0_, geek0_.Nom as Nom3_0_, geek0_.Prenom as Prenom4_0_, geek0_.Sexe as Sexe5_0_ from GEEK geek0_ where geek0_.Sexe like ?
+09:17:39,936 DEBUG main hibernate.SQL:109 - select interet0_.id as id1_1_0_, interet0_.Programmation as Programm2_1_0_ from INTERET interet0_ where interet0_.id=?
+09:17:40,327 DEBUG main hibernate.SQL:109 - select interet0_.id as id1_1_, interet0_.Programmation as Programm2_1_ from INTERET interet0_ order by interet0_.id

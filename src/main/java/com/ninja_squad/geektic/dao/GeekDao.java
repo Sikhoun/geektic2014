@@ -26,8 +26,8 @@ public class GeekDao {
 		}
 		
 		// Recherche Geek By ID
-		public Geek findById(Long id){
-			return entityManager.find(Geek.class, id);
+		public Geek findById(long i){
+			return entityManager.find(Geek.class, i);
 		}
 		
 		// Recherche Les Geek By Interest
@@ -40,6 +40,7 @@ public class GeekDao {
 			
 		}
 		
+		// Recherche Les Geek By sexe
 		public List<Geek> findBySex(String Sexe){
 			String jpql = "select a from Geek a  where a.sexe like :SEXE";
 			TypedQuery<Geek> query = entityManager.createQuery(jpql, Geek.class);

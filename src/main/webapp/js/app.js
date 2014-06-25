@@ -10,7 +10,9 @@ app.controller('HelloCtrl', function($scope, $http) {
     });
     
     $http.get('/api/interet').success(function(interets) {
+    	 	$scope.valueInteret = "";
             $scope.interets = interets;
+            console.log($scope.valueInteret);
         });
     
     $scope.showGeekSexe = function(sexe) {
@@ -20,6 +22,16 @@ app.controller('HelloCtrl', function($scope, $http) {
         
     	console.log($scope.geeks);
     };
+    
+    $scope.showGeekInteret = function() {
+    	  $http.get('/api/geek/'+$scope.interetSelectionner+'/'+$scope.sexeSelectionner).success(function(geeks) {
+              $scope.geeks = geeks;
+          });
+    	  console.log($scope.interetSelectionner);
+    	  console.log($scope.sexeSelectionner);
+    	console.log("test toto");
+    };
+ 
     
 
   

@@ -35,7 +35,12 @@ public class GeekService {
 	  		return geek;
 	  	}
 	  	
-
+		@RequestMapping(value="/{idInteret}/{sexe}", method = RequestMethod.GET)
+	  	public List<Geek> showGeekInteret(@PathVariable("idInteret") Long idInteret,@PathVariable("sexe") String sexe) {
+	  		List<Geek> geek = geekDao.findByInteretSex(idInteret,sexe);
+	  		return geek;
+	  	}
+	  	
 		public GeekService() {
 			
 		}

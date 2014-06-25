@@ -34,7 +34,7 @@ public class GeekDaoTest extends BaseDaoTest {
 	     @Test
 	     public void testFindAllGeek() {
 	    	   List<Geek> geeks = geekDaoTest.searchGeekAll();
-		         assertEquals(4, geeks.size());  
+		         assertEquals(6, geeks.size());  
 	     }
 	  
 	    
@@ -42,15 +42,9 @@ public class GeekDaoTest extends BaseDaoTest {
 	     @Test
 	     public void testFindBySex() {
 	    	 List<Geek> geeksWomen = geekDaoTest.findBySex("FEMME");
-	         assertEquals(1, geeksWomen.size());
+	         assertEquals(2, geeksWomen.size());
 	         List<Geek> geeksMen = geekDaoTest.findBySex("HOMME");
-	         assertEquals(3, geeksMen.size());
-	     }    
-	     
-	   
-	     
-	    
-	          
-	     
+	         assertEquals(4, geeksMen.size());
+	     }         
 	 }
 

@@ -11,24 +11,31 @@
   </head>
   <body bgcolor="#FFFFFF" topmargin="5">
 	<h1 align="center">FaceGeek !</h1>
-	
+	<font color="red">
 	<h2 class = "text.danger" align="center">Le Site De Rencontre Des Geeks !</h2>
+	</font> 
     <body ng-controller="HelloCtrl">
+    <div align="center"><br>
          GEEK PROFILE :
-          				<br><br/> 
+          				</div>
 					<FORM>
-						 <INPUT type= "radio" name="sexe" value="Masculin"ng-click="showGeekSexe('HOMME')"> Masculin
-						 <INPUT type= "radio" name="sexe" value="Feminin" ng-click="showGeekSexe('FEMME')"> Feminin
+					<div align="center"><br>
+						 <INPUT type= "radio" name="sexe" value="HOMME"ng-change="showGeekSexe('HOMME')" ng-model="sexeSelectionner"> Masculin
+						 <INPUT type= "radio" name="sexe" value="FEMININ" ng-change="showGeekSexe('FEMME')"ng-model="sexeSelectionner"> Feminin
+						 </div>
 					</FORM>
-					  <br><br/> 
-					    <FORM>
-					    <SELECT name="centreInteret" size="1">
-					    <OPTION ng-repeat="interet in interets" bgcolor="#FFFFFF">		
-                		<font color="arial" face="#FFFF00">
-                  		{{interet.programmation}}	
-                		</font>
-					    </SELECT>
-					    </FORM>
+					  <br>
+					    <form name="myform"  method="POST">
+						 <div align="center"><br>
+						<input type="radio" name="option1" value="1" ng-change="showGeekInteret()" ng-model="interetSelectionner"> C#
+						 <input type="radio" name="option2" value="2"ng-change="showGeekInteret()" ng-model="interetSelectionner"> Java
+						 <input type="radio" name="option3" value="3"ng-change="showGeekInteret()" ng-model="interetSelectionner"> VB
+						 <input type="radio" name="option4" value="4"ng-change="showGeekInteret()" ng-model="interetSelectionner"> Ruby
+						 <input type="radio" name="option5" value="5"ng-change="showGeekInteret()" ng-model="interetSelectionner"> VBA
+						 <input type="radio" name="option6" value="6"ng-change="showGeekInteret()" ng-model="interetSelectionner"> SQL
+						<br>
+						 </div>
+						 </form>
 					  
 					  <br><br/>
        
@@ -37,19 +44,21 @@
                    <tr> 
               			<td ng-repeat="geek in geeks" bgcolor="#FFFFFF">		
                 		<font color="arial" face="#FFFF00">
-                  		<h2>Profile : {{geek.id}}</h2>
+                  		<h2 align="center">Profile : {{geek.id}}</h2>
 					   <span>Nom : {{geek.nom}} <br/> 
 					   		 Prenom :{{geek.prenom}}<br/>
 					   		 Age : {{geek.age}}<br/>
-					   		 Sexe : {{geek.sexe}}<br/> </span>    		
-                	</font>
-              		</td>
+					   		 Sexe : {{geek.sexe}}<br/>   	   		
+              			<div ng-repeat="interet in geek.interets" bgcolor="#FFFFFF">		
+                  			Interet : {{interet.programmation}}   
+                		</div>
+                		<INPUT type= "button" name="info" value="Informations Supplémentaires" ng-click="showGeekSexe('HOMME')"> 
+                		 </span>
+                		 </font>
+              			</td>   		  
             	</tr>            	
              	</table> 
-             	
-             	  
-       
-					   
+             					   
       
         <script src="/js/angular.js"></script>
         <script src="/js/angular-route.js"></script>

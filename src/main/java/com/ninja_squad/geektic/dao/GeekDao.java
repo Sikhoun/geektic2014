@@ -9,6 +9,7 @@ import javax.persistence.TypedQuery;
 import org.springframework.stereotype.Repository;
 
 import com.ninja_squad.geektic.entity.Geek;
+import com.ninja_squad.geektic.entity.Interet;
 
 @Repository
 public class GeekDao {
@@ -31,14 +32,15 @@ public class GeekDao {
 		}
 		
 		// Recherche Les Geek By Interest
-		public List<Geek> findByInteret(int Interet){
-			String jpql = "select a from Geek a  where a.Interet like :INTERET";
+		/*public List<Geek> findByInteret(long idInteret){
+			String jpql = "Select s from GEEK s INNER JOIN GEEKINTERET a ON GEEK.id = GEEKINTERET.ID_GEEK where id_interet = :INTERET";
 			TypedQuery<Geek> query = entityManager.createQuery(jpql, Geek.class);
-			query.setParameter("INTERET",Interet);
+			query.setParameter("INTERET",idInteret);
 			List<Geek> result = query.getResultList();
 			return result;
 			
-		}
+		}*/
+		
 		
 		// Recherche Les Geek By sexe
 		public List<Geek> findBySex(String Sexe){
@@ -47,8 +49,9 @@ public class GeekDao {
 			query.setParameter("SEXE",Sexe);
 			List<Geek> result = query.getResultList();
 			return result;
-			
 		}
+		
+		
 		
 		public void persist(Geek geek) {
 			entityManager.persist(geek);

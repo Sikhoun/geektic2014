@@ -32,13 +32,17 @@ public class InteretDao {
 	}
 	
 	// Recherche All Interet par id geek
-		public List<Interet>findAllInteretByGeek(long idGeek)
+	/*	public List<Interet>findAllInteretByGeek(long idGeek)
 		{
-			String jpql = "select s from Interet s order by id"; 
+			String jpql = "Select s from Interet s INNER JOIN GEEKINTERET a ON Interet.ID = GEEKINTERET.ID_INTERET where id_geek = :IDGEEK"; 
 			TypedQuery<Interet> query = entityManager.createQuery(jpql, Interet.class);
+			query.setParameter("IDGEEK",idGeek);
 			List<Interet> result = query.getResultList();
 			return result;
-		}
+		}*/
+		
+		
+	
 	
 	
 }

@@ -47,12 +47,11 @@ public class InteretDaoTest extends BaseDaoTest {
 	    
 
 	     /*@Test
-	     public void testFindBySex() {
-	         List<Geek> geeksWomen = geekDaoTest.findBySex("Femme");
-	         assertEquals(1, geeksWomen.size());
-	         List<Geek> geeksMen = geekDaoTest.findBySex("Homme");
-	         assertEquals(3, geeksMen.size());
-	     }   */ 
+	     public void findAllInteretByGeek() {
+	         List<Interet> Interet = interetDaoTest.findAllInteretByGeek(4L);
+	         assertEquals(3, Interet.size());
+	       
+	     }  */  
 	     
 	
 }

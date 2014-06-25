@@ -12,10 +12,6 @@ public class Interet {
 
 		@Column(name = "Programmation")
 		private String programmation;
-		
-		@ManyToMany
-		@JoinTable(name = "GEEKINTERET", joinColumns = @JoinColumn(name = "ID_INTERET"), inverseJoinColumns = @JoinColumn(name = "ID_GEEK"))
-
 
 		public Long getId() {
 			return id;

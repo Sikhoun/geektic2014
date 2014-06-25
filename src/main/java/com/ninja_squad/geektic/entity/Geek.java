@@ -1,9 +1,14 @@
 package com.ninja_squad.geektic.entity;
 
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -25,7 +30,22 @@ public class Geek {
 	@Column(name = "Age")
 	private int age;
 	
+	@ManyToMany
+	@JoinTable(name = "GEEKINTERET", joinColumns = @JoinColumn(name = "ID_GEEK"), inverseJoinColumns = @JoinColumn(name = "ID_INTERET"))
+	private  Set<Interet> interets;
 	
+
+
+
+
+	public Set<Interet> getInterets() {
+		return interets;
+	}
+
+	public void setInterets(Set<Interet> interets) {
+		this.interets = interets;
+	}
+
 	public String getNom() {
 		return nom;
 	}
